@@ -10,9 +10,7 @@ install:
   - cmd: echo This is batch again
   - cmd: set MY_VAR=12345
 
-build:
-  parallel: true
-  verbosity: minimal
+build: off
 
 test_script:
   - echo This is the test script
