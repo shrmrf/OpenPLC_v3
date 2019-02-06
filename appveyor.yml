@@ -2,15 +2,8 @@ image: Visual Studio 2015
 init:
   - git config --global core.autocrlf input
 install:
-  # by default, all script lines are interpreted as batch
-  - echo This is batch
-  # to run script as a PowerShell command prepend it with ps:
-  - ps: Write-Host 'This is PowerShell'
   # batch commands start from cmd:
-  - cmd: echo This is batch again
-  - cmd: set MY_VAR=12345
+    - cmd: "C:\\cygwin\\bin\\bash.exe" ./install.sh win
 
 build: off
 
-test_script:
-  - echo This is the test script
