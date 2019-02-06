@@ -1,5 +1,14 @@
-image: Visual Studio 2017
-platform: x64
-
+image: Visual Studio 2015
+init:
+  - git config --global core.autocrlf input
 install:
-    - ps: Write-Host "Appveyor!!"
+  # by default, all script lines are interpreted as batch
+  - echo This is batch
+  # to run script as a PowerShell command prepend it with ps:
+  - ps: Write-Host 'This is PowerShell'
+  # batch commands start from cmd:
+  - cmd: echo This is batch again
+  - cmd: set MY_VAR=12345
+
+test_script:
+  - echo This is the test script
